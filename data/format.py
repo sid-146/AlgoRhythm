@@ -8,5 +8,4 @@ runAudit = {
     'run_start' : pd.Serise(dtype = np.datetime64),
     'run_end' : pd.Serise(dtype = np.datetime64),
     'run_duration' : pd.Series(dtyoe = np.datetime64)
-
 }
