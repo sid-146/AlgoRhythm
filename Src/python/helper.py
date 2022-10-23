@@ -65,3 +65,14 @@ def random_array(size,**kargs):
         message 
         
         return False
+
+
+def check_schema_change():
+    new_columns = []
+    
+    try:
+        return True, new_columns
+    except Exception as err:
+        return False, None
+        
+
