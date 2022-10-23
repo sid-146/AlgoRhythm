@@ -16,4 +16,6 @@ configUpdate = {
     'run_start':pd.Series(dtypes= np.datetime64),
     'run_end' : pd.Series(dtypes= np.datetime64),
     'run_duration':pd.Series(dtypes= np.datetime64),
+    'is_active':pd.Series(dtypes= 'int64'),
+    'max_run_date':pd.Series(dtype= np.datetime64)
 }
