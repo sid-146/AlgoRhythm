@@ -9,3 +9,11 @@ runAudit = {
     'run_end' : pd.Serise(dtype = np.datetime64),
     'run_duration' : pd.Series(dtyoe = np.datetime64)
 }
+
+configUpdate = {
+    'id':pd.Series(dtype='int64'),
+    'source':pd.Series(dtypes= 'str'),
+    'run_start':pd.Series(dtypes= np.datetime64),
+    'run_end' : pd.Series(dtypes= np.datetime64),
+    'run_duration':pd.Series(dtypes= np.datetime64),
+}
