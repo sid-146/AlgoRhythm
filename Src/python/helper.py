@@ -23,27 +23,40 @@ def insert_run_records(AlgoName, size):
     return True
 
 
-def random_array(size, **kargs):
-    message = ""
+def random_array(size,range_start,range_end , **kargs):
     """
         Function Returns randomly generated array for given size
-        Takes optional args Reverse (Boolean) which returns reversed sorted list
+        Args:
+            size (int) : Size of array\n
+            -optional keyword args\n
+            reverse [boolean] : Returns reservely sorted array (default False)\n
+            is_sorted (Boolean) : Returns sorted array (Default Fals)
     """
-    array_list = []
+    message = ""
+    array = []
     
     reverse = kargs.get('Reverse', 0)
     is_sorted = kargs.get('is_sorted', 0)
+    range_start = kargs.get('start',None)
+    range_end = kargs.get('end', None)
 
     try:
-        array_list = [random.randint(15, 999999) for i in range(size)]
         
+        if range_start != None:
+            if range_end != None:
+                array = [random.randint(range_start, range_end) for i in range(size) ]
+            else:
+                range_end = range_start + 100000
+        else:
+            array = [random.randint(15, 999999) for i in range(size)]
+
         if reverse != 0 or reverse != False:
-            array_list.sort(reverse=True)
+            array.sort(reverse=True)
 
         if is_sorted != 0 or is_sorted != False:
-            array_list.sort()
+            array.sort()
         
-        return array_list
+        return array
 
     except Exception as err:
         error = "" 

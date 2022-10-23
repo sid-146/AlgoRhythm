@@ -1,4 +1,4 @@
-import helper
+from helper import *
 
 def bubble_sort():
     return True
@@ -14,3 +14,5 @@ def insertion_sort():
 
 def exponential_sort():
     return True
+
+random_array()
