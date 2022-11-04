@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int random_array(int size){
+int* random_array(int size){
     int array[size];
     return array;
 }

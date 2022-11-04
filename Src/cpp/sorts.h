@@ -16,7 +16,7 @@ values bubble_sort(int size)
 
     int *array_head;
 
-    for (int i = 0, i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         cout << "i " << *(array_head + i) << endl;
     }
