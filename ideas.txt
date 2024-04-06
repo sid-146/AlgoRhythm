@@ -1,1 +1,5 @@
 -- Introduce pandas and numpy use
+
+
+-- Use sqlite for incremental datastore
+-- Use sqlite for storing data
