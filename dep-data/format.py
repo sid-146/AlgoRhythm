@@ -19,3 +19,4 @@ configUpdate = {
     'is_active':pd.Series(dtypes= 'int64'),
     'max_run_date':pd.Series(dtype= np.datetime64)
 }
+
