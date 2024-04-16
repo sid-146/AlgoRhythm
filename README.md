@@ -1,2 +1,2 @@
 # AlgoRhythm
-Home of different algoRhythms
+Home of different algoRhythms and Data Structure
