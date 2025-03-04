@@ -4,7 +4,7 @@ from typing import Any
 
 class Node(BaseModel):
     data:Any = None
-    next:Node = None    
+    next:Any = None    
 
 
 class LinkedList:
@@ -60,15 +60,55 @@ class LinkedList:
         return True
 
 
-    def add_node_at_position(self, data, position):
+    def add_node_at_position(self, data, index):
         """
         Add node at given position
         
         approach:
         - create new node
-        - check if head is none
+        - check if index == 0 if yes then call add_node method
+        - iterate over linked list till index-1
+        - update next of new node to next of current node
+        - update next of current node to new node
         """
+        if index == 0:
+            return self.add_node(data)
+        
+        position = 0 # It will keep track of current index
+        new_node = Node(data=data)
+        current = self.head
+
+        while current is not None and position+1 != index: # Iterate till index-1
+            current = current.next
+            position += 1 
+
+        # Index out of bound
+        if current is None:
+            return False
+
+        # Updating the ll logic
+        new_node.next =current.next
+        current.next = new_node
+        return True
+
+
+    def update_node(self, data, index):
         return
+
+    def remove_first_node(self):
+        return
+
+    def remove_last_node(self):
+        return
+
+
+    def remove_node_at_position(self, index):
+        return
+
+    def search_by_value(self, data):
+        return
+
+    
 
 
 
@@ -107,5 +147,11 @@ if __name__ == "__main__":
     
     print('Adding new node at end')
     assert ll.add_node_at_end(4) == True
+
+    print('Adding new node at position')
+    assert ll.add_node_at_position(2.1, 2) == True
+
+    print('Adding new node at position not present in ll')
+    assert ll.add_node_at_position(5.1, 12) == False
     
     ll.print_ll()
