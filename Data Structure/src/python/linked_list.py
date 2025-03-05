@@ -92,13 +92,13 @@ class LinkedList:
     def update_node(self, data, index):
         """
         Update node at given index
-        
+
         approach
         check if linked list is empty
         iterate over linked list till index
         update data of current node
         """
-        
+
         # Empty linked list condition
         if self.__is_empty():
             return False
@@ -119,7 +119,10 @@ class LinkedList:
         return True
 
     def remove_first_node(self):
-        return
+        if self.__is_empty():
+            return False
+        self.head = self.head.next
+        return True
 
     def remove_last_node(self):
         return

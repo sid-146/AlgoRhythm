@@ -150,18 +150,18 @@ def insert_at_position(data, index):
         current.next = new_node
 ```
 
-
 ## `update_data_at_position`
 
 This method is used to update the data at a specific position in the linked list.
 
 ### Steps
+
 1. Check if linked list is empty  
-1.1. if empty return
+   1.1. if empty return
 2. iterate over linked list till position  
-2.1. check if node is present or not  
-2.2. if not present return  
-2.3. set `current.data` to `data`
+   2.1. check if node is present or not  
+   2.2. if not present return  
+   2.3. set `current.data` to `data`
 
 ### Example
 
@@ -181,3 +181,29 @@ def update_node_at_position(data, index):
     current.data = data
 ```
 
+## `delete_first_node`
+
+This method is used to remove the first node of linked list
+
+### Steps
+
+1. Check if linked list is empty  
+   1.1. if empty return
+2. set `head` to `head.next`
+
+### Example
+
+```python
+def remove_first_node():
+  if __is_empty():
+    return
+
+  head = head.next
+```
+
+
+## `delete_last_node`
+This method is used to remove the last node of linked list
+
+### Steps
+1.1.
