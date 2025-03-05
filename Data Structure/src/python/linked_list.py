@@ -3,8 +3,8 @@ from typing import Any
 
 
 class Node(BaseModel):
-    data:Any = None
-    next:Any = None    
+    data: Any = None
+    next: Any = None
 
 
 class LinkedList:
@@ -33,10 +33,9 @@ class LinkedList:
 
         return True
 
-
     def add_node_at_end(self, data):
         """
-        Add node at end of linked list 
+        Add node at end of linked list
 
         approach:
         - create new node
@@ -46,7 +45,7 @@ class LinkedList:
             - set next of last node to new node and set new node next as none
         """
 
-        new_node = Node(data= data)
+        new_node = Node(data=data)
         if self.__is_empty():
             self.head = new_node
         else:
@@ -54,16 +53,15 @@ class LinkedList:
             while current.next:
                 current = current.next
 
-            current.next = new_node 
+            current.next = new_node
             new_node.next = None
-        
-        return True
 
+        return True
 
     def add_node_at_position(self, data, index):
         """
         Add node at given position
-        
+
         approach:
         - create new node
         - check if index == 0 if yes then call add_node method
@@ -73,27 +71,52 @@ class LinkedList:
         """
         if index == 0:
             return self.add_node(data)
-        
-        position = 0 # It will keep track of current index
+
+        position = 0  # It will keep track of current index
         new_node = Node(data=data)
         current = self.head
 
-        while current is not None and position+1 != index: # Iterate till index-1
+        while current is not None and position + 1 != index:  # Iterate till index-1
             current = current.next
-            position += 1 
+            position += 1
 
         # Index out of bound
         if current is None:
             return False
 
         # Updating the ll logic
-        new_node.next =current.next
+        new_node.next = current.next
         current.next = new_node
         return True
 
-
     def update_node(self, data, index):
-        return
+        """
+        Update node at given index
+        
+        approach
+        check if linked list is empty
+        iterate over linked list till index
+        update data of current node
+        """
+        
+        # Empty linked list condition
+        if self.__is_empty():
+            return False
+
+        # Update node
+        current = self.head
+        position = 0
+        while current is not None and position != index:
+            current = current.next
+            position += 1
+
+        # Index out of bound
+        if current is None:
+            return False
+
+        current.data = data
+
+        return True
 
     def remove_first_node(self):
         return
@@ -101,21 +124,16 @@ class LinkedList:
     def remove_last_node(self):
         return
 
-
     def remove_node_at_position(self, index):
         return
 
     def search_by_value(self, data):
         return
 
-    
-
-
-
     def print_ll(self):
         """
         print all nodes of linked list
-        
+
         Approach:
         - store head in a variable
         - iterate over linked list current is none
@@ -126,9 +144,8 @@ class LinkedList:
         while current:
             print(current.data, end="->")
             current = current.next
-        
-        print()
 
+        print()
 
 
 if __name__ == "__main__":
@@ -137,21 +154,20 @@ if __name__ == "__main__":
     print("Checking if linked list is empty")
     assert ll.head is None
 
-    print('Adding new nodes')
-    assert ll.add_node(1) == True 
-    assert ll.add_node(2) == True 
-    assert ll.add_node(3) == True 
-
+    print("Adding new nodes")
+    assert ll.add_node(1) == True
+    assert ll.add_node(2) == True
+    assert ll.add_node(3) == True
 
     ll.print_ll()
-    
-    print('Adding new node at end')
+
+    print("Adding new node at end")
     assert ll.add_node_at_end(4) == True
 
-    print('Adding new node at position')
+    print("Adding new node at position")
     assert ll.add_node_at_position(2.1, 2) == True
 
-    print('Adding new node at position not present in ll')
+    print("Adding new node at position not present in ll")
     assert ll.add_node_at_position(5.1, 12) == False
-    
+
     ll.print_ll()

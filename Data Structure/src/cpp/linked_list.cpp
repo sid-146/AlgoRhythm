@@ -19,7 +19,7 @@ public:
         Node *next = NULL;
     }
 
-    Node(int index, int data)
+    Node(int index, string data)
     {
         index = index;
         data = data;
@@ -111,49 +111,38 @@ int main()
 
         switch (option)
         {
-        case 0:
-            cout << "" << endl;
-            break;
-        case 1:
-            cout << "Enter key and data of the node to be appended " << endl;
-            cin >> index;
-            cin >> data;
-            node->index = index;
-            node->data = data;
-            bool result = LL.addNode(node);
-            if (result == true)
-            {
-                cout << "Node added in linked list" << endl;
-            }
-            else
-            {
-                cout << "Node with " << node->index << " already exists." << endl;
-            }
-            break;
-
-            // case 2:
-            //     break;
-            // case 3:
-            //     break;
-            // case 4:
-            //     break;
-            // case 5:
-            //     break;
-            // case 6:
-            //     LL.print();
-            //     break;
-
-        case 2:
-            LL.print();
-            break;
-        case 3:
-            system("cls");
-            break;
-
-        default:
-            cout << "Wrong option." << endl;
-            break;
-        }
+	        case 0:
+	            cout << "" << endl;
+	            break;
+	            
+	        case 1:
+	            cout << "Enter key and data of the node to be appended " << endl;
+	            cin >> index;
+	            cin >> data;
+	            node->index = index;
+	            node->data = data;
+	            bool result = LL.addNode(node);
+	            if (result == true)
+	            {
+	                cout << "Node added in linked list" << endl;
+	            }
+	            else
+	            {
+	                cout << "Node with " << node->index << " already exists." << endl;
+	            }
+	            break;
+	
+	        case 2:
+	            LL.print();
+	            break;
+	        case 3:
+	            system("cls");
+	            break;
+	
+	        default:
+	            cout << "Wrong option." << endl;
+	            break;
+	        }
 
     } while (option != 0);
     return 0;
