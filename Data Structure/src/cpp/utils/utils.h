@@ -15,3 +15,13 @@ namespace returnMethods
         int a;
     };
 }
+
+namespace dataStructures
+{
+    struct Node
+    {
+        int index;
+        int data;
+        Node *next;
+    };
+}
