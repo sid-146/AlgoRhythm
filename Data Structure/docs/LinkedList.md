@@ -5,6 +5,7 @@
 -   Non Contiguos memory allocation.
 -   Nodes store data and memory address of next node.
 -   Used in dynamic memory allocation, graph representation.
+-   Linked list is created in heap memory
 
 <br>
 
@@ -201,9 +202,10 @@ def remove_first_node():
   head = head.next
 ```
 
-
 ## `delete_last_node`
+
 This method is used to remove the last node of linked list
 
 ### Steps
+
 1.1.
