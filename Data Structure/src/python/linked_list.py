@@ -150,6 +150,16 @@ class LinkedList:
 
         print()
 
+    def print_ll_recursive(self, node):
+        if node is not None:
+            print(node.data, end="->")
+            self.print_ll_recursive(node.next)
+
+    def print_ll_reverse(self, node):
+        if node is not None:
+            self.print_ll_reverse(node.next)
+            print(node.data, end="->")
+
 
 if __name__ == "__main__":
     ll = LinkedList()
@@ -174,3 +184,6 @@ if __name__ == "__main__":
     assert ll.add_node_at_position(5.1, 12) == False
 
     ll.print_ll()
+    ll.print_ll_recursive(ll.head)
+    print()
+    ll.print_ll_reverse(ll.head)
