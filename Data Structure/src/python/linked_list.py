@@ -151,11 +151,66 @@ class LinkedList:
         print()
 
     def print_ll_recursive(self, node):
+        """
+        printing linked list using recursion
+        Print first then callback
+
+        Suppose we have linked list 1->2->3->4->5->null
+
+        recursion tree
+
+        Call Stack will look as follows:
+        ```
+        |         |
+        | func(0) |
+        | func(5) |
+        | func(4) |
+        | func(3) |
+        | func(2) |
+        | func(1) |
+        -----------
+        ```
+
+        printing order
+        `1->2->3->4->5`
+
+        - check if node is none
+        - print data of node
+        - call print_ll_recursive with next node
+        """
+
         if node is not None:
             print(node.data, end="->")
             self.print_ll_recursive(node.next)
 
     def print_ll_reverse(self, node):
+        """
+        printing linked list using recursion
+        Recursive call first then print
+
+        Suppose we have linked list 1->2->3->4->5->null
+
+        recursion tree
+
+        Call Stack will look as follows:
+        ```
+        |         |
+        | func(0) |
+        | func(5) |
+        | func(4) |
+        | func(3) |
+        | func(2) |
+        | func(1) |
+        -----------
+        ```
+
+        printing order
+        `5->4->3->2->1`
+
+        - check if node is none
+        - print data of node
+        - call print_ll_recursive with next node
+        """
         if node is not None:
             self.print_ll_reverse(node.next)
             print(node.data, end="->")

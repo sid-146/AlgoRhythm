@@ -1,4 +1,4 @@
-from helper import timeit
+from PracticeQuestions.src.python.utils.helper import timeit
 import random
 
 
