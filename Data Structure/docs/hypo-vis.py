@@ -18,9 +18,11 @@ box_width, box_height = 50, 50
 gap = 20
 border_width = 2  # Width of the border
 
+
 # Function to draw a box with only the border
 def draw_box(x, y):
     pygame.draw.rect(window, BLACK, (x, y, box_width, box_height), border_width)
+
 
 # Initial number of boxes
 num_boxes = 5
