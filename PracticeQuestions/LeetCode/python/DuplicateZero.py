@@ -38,7 +38,6 @@ def duplicateZeroBruteForce(nums: list[int]) -> None:
                 j = i + 1
                 holder = nums[j]
                 nums[j] = 0
-                
 
 
 @timeit
