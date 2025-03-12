@@ -75,7 +75,7 @@ The goal is to count how many negative and positive numbers exist and return the
 class Solution:
     def maximumCount(self, nums: List[int]) -> int:
             """
-            Time ComplexityL `O(n/2)` => `O(N)`
+            Time Complexity: `O(n/2)` => `O(N)`
             """
             pos = 0
             neg = 0
