@@ -6,7 +6,17 @@ Before understanding about K-Means we need to understand what is `Clustering`
 
 ## What is Clustering?
 
+Cluster Analysis is a technique in data mining and machine learning that groups similar object into Clusters.
+
+K-Means Clustering is one such technique, which aims to divide the dataset into K (pre-defined) clusters by minimizing the sum of squared distances between the datapoint and their respective clusters.
+
 ## Let's discuss Example
+
+Let's assume, a bank wants to give credit card offers to its customer. Currently process is manual looking for details of each customers and based on this information they decide which offer should be given to that particular customer.
+
+As the banks generally have millions of customers. It does not make sense to look into the details of each customer separately and then make decision.
+
+Let's say bank decides to group the customers based on their incomes
 
 ## What is K-Means Clustering?
 
@@ -43,3 +53,29 @@ Before understanding about K-Means we need to understand what is `Clustering`
     - After convergence is achieved. The Algorithm outputs the final cluster centroids and assigns each data point to a cluster.
 
 ## Objective of K-Means Clustering
+
+The main objective of k-means clustering is to partition data into specific number of groups, where the the data points in same cluster have same properties and dissimilar to the other groups.
+This is achieved by minimizing the distance between the data points and their assigned cluster's center (Centroid)
+
+1. **Grouping similar data points:**
+
+    - Identify pattern in your data by grouping data points that share similar characteristics together.
+    - Discovering underlying structures within the data.
+
+2. **Minimizing with-cluster distance**
+
+    - The algorithm is responsible to make sure data points within cluster are as close as possible.
+    - Generally distance is measured by the Euclidean Distance.
+    - This ensures tight-knit clusters with high cohesiveness.
+
+3. **Maximizing between-cluster distance**
+    - K-Means also tries to maximize the separation between clusters.
+    - Ideally, data points from different clusters should be far apart, making the clusters distinct from each other.
+
+```
+Euclidean Distance is like measuring the straightest and shortest path between two points.
+```
+
+$$
+\text{Euclidean Distance (d)} = \sqrt{[(x_2 - x_1)^2 + (y_2 - y_1)^2]}
+$$
