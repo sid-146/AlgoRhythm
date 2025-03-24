@@ -18,6 +18,26 @@ As the banks generally have millions of customers. It does not make sense to loo
 
 Let's say bank decides to group the customers based on their incomes
 
+```mermaid
+flowchart
+
+A[High Income]
+
+B[Average Income]
+
+C[Low Income]
+```
+
+Now bank can come up with three different strategies or offers one for each group.
+
+This groups shown above are known as clusters, and the process of creating these groups is known as clustering.
+
+```
+Clustering is the process of diving the entire data into groups (also known as clusters) based on the pattern in the data.
+```
+
+Clustering is an unsupervised learning problem. In clustering we do not have target variable to predict. We look into data and try to club the similar observation, and form different clusters.
+
 ## What is K-Means Clustering?
 
 -   Unsupervised machine learning algorithm used for partitioning a dataset into pre-defined numbers of cluster.
@@ -26,6 +46,9 @@ Let's say bank decides to group the customers based on their incomes
 -   Optimal Centroid is obtained by minimizing the sum of squared distances between each data point and it's closest centroid.
 
 `This is an algorithm that tries to minimize the distance between the points in a cluster with their centroid`
+
+## Properties of K-Means Clustering
+Let's take an example and understand. We will take same bank example from before, which wants to segment its customers. Bank want to make segmentation using income and debt.
 
 ## How K-Means Clustering works?
 
