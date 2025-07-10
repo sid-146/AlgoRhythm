@@ -1,17 +1,19 @@
 package main
+
 import "fmt"
 
-func insertion_sort(arr []int, n int){
-	for i := 0; i < n; i++{
+func insertion_sort(arr []int8, n int) {
+	var swap_counter int = 0
+	for i := 0; i < n; i++ {
 		j := i
-		for j>0 && arr[j-1] > arr[j] {
-			var temp int = arr[j-1]
+		for j > 0 && arr[j-1] > arr[j] {
+			var temp int8 = arr[j-1]
 			arr[j-1] = arr[j]
 			arr[j] = temp
 			j--
 		}
-
 	}
+	fmt.Println("Number of Swaps: ", swap_counter)
 }
 
 func main() {
