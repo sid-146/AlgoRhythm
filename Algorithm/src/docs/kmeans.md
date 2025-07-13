@@ -12,7 +12,7 @@ K-Means Clustering is one such technique, which aims to divide the dataset into 
 
 ## Let's discuss Example
 
-Let's assume, a bank wants to give credit card offers to its customer. Currently process is manual looking for details of each customers and based on this information they decide which offer should be given to that particular customer.
+Let's assume, a bank wants to give credit card offers to its customer. Currently process is manual looking for details of each customers and based on this information they decide which offer should be given to a particular customer.
 
 As the banks generally have millions of customers. It does not make sense to look into the details of each customer separately and then make decision.
 
