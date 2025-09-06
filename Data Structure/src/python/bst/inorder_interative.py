@@ -14,14 +14,20 @@ def in_order(root: Node):
     if root is None:
         return
 
-    stack: List[Node] = [root]
+    stack: List[Node] = []
+    node = root
 
-    while stack:
-        node = stack.pop()
-        if node.left is not None:
-            stack.append(node.left)
-        if node.right is not None:
-            stack.append(node.right)
+    while True:
+        if node is not None:
+            stack.append(node)
+            node = node.left
+        else:
+            if len(stack) == 0:
+                # i have traversed the whole tree
+                break
+            node = stack.pop()
+            print(node.value, end=" ")
+            node = node.right
 
 
 def main():
