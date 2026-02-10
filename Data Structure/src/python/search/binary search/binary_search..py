@@ -22,7 +22,7 @@ def binary_search(arr, x):
         if arr[mid] == x:
             return mid
         if arr[mid] > x:
-            right = mid
+            right = mid - 1
         else:
             left = mid + 1
     return -1
@@ -34,7 +34,7 @@ def recursive_binary_search(arr, x, left, right):
         return
     mid = (left + right) // 2
     if arr[mid] == x:
-        return mid
+        return mid - 1
     if arr[mid] < x:
         left = mid + 1
         return recursive_binary_search(arr, x, left, right)
